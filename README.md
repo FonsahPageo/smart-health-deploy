@@ -1,0 +1,2 @@
+# Smart Health Predictor deployment repository
+- After pulling code from 'smart-health-predictor' and builiding the containers and running on docker-compose, the code is pushed here and pulled to do staging on kubernetes
