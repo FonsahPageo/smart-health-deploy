@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction results</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <script type="text/javascript" src="{{ url_for('static', filename='script.js') }}"></script>
+</head>
+
+<body>
+    <!-- <div w3-include-html="templates/header.html"></div> -->
+    <!-- <iframe src="header.html" frameborder="0"></iframe> -->
+    {% include 'header.html' %}
+
+    <div class="container">
+        <h2>Prediction results</h2>
+        <p>The predicted disease is: {{ prediction }}</p>
+
+        <h2>Note!!!</h2>
+        <p>The predictor will show you the results of the prediction made by different models, hence different possible
+            illnesses that you could be suffering from. </p>
+        <p>Thus, the results gotten from here are not conclusive so you should go to the the nearest medical facility
+            for proper checkup and follow up on your condition as determined by lab tests.</p>
+        <p>Click <a href="{{ url_for('consultation') }}">here</a> or switch to the consultation tab to talk with a
+            doctor</p>
+        <p>Choose a doctor specialized in your case for better diagnosis</p>
+
+    </div>
+
+
+    {% include 'footer.html' %}
+    <!-- <div w3-include-html="templates/footer.html"></div>
+    <script>
+        includeHTML();
+    </script> -->
+</body>
+
+</html>
